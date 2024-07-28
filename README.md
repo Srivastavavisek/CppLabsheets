@@ -1,2 +1,2 @@
-# C++Labsheets
-This repository contains my C++ labsheets from college-2nd-sem 
+# C++ Labsheets Repo
+This repo contains my C++ labsheets from my 2nd sem.
