@@ -53,36 +53,13 @@ public:
     USCurrency(int d, int c): dollar(d), cents(c) {
         usd = d + c / 100.0;
     }
-    USCurrency(float dlr): usd(dlr) {
-        convert();
-    }
-
-    void convert() {
-        dollar = static_cast<int>(usd);
-        cents = static_cast<int>((usd - dollar) * 100);
-    }
-    
-    void getDollar() {
-        cout << "Enter USD: ";
-        cin >> usd;
-        
-        convert();
-    }
+    USCurrency(float dlr): usd(dlr) { }
 
     void displayDollar() {
         cout << "Dollars: " << dollar << endl << "Cents: " << cents << endl;
     }
-
-    operator NepaleseCurrency();
     
 };
-
-USCurrency::operator NepaleseCurrency() {
-    float nrs = usd * EXCHANGERATE;
-    int r = static_cast<int>(nrs);
-    int p = static_cast<int>((nrs - r) * 100);
-    return NepaleseCurrency(r, p);
-}
 
 NepaleseCurrency::operator USCurrency() {
     float usd = nrs / EXCHANGERATE;
@@ -94,15 +71,12 @@ NepaleseCurrency::operator USCurrency() {
 int main()
 {
     USCurrency us;
-    NepaleseCurrency np(98.51f);
+    NepaleseCurrency np;
+    // (98.51f)
 
     np.getNRS();
     us = np;
     us.displayDollar();
-
-    us.getDollar();
-    np = us;
-    np.displayNRS();
 
     return 0;
 }
