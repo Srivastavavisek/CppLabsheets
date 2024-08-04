@@ -1,12 +1,12 @@
-/*
-Modify Q.2 to add base class sales that holds an array of three
-floats so that it can record the dollar sales of a particular
-publication for the last three months. Include getdata() function to
-get three Sales amount from the user and a putdata() function to
-display sales figures. Alter the book and tape classes so they are
-derived from both publication and sales. An object of class book or
-tape should input and output sales data along with its other data.
-*/
+
+// Modify Q.2 to add base class sales that holds an array of three
+// floats so that it can record the dollar sales of a particular
+// publication for the last three months. Include getdata() function to
+// get three Sales amount from the user and a putdata() function to
+// display sales figures. Alter the book and tape classes so they are
+// derived from both publication and sales. An object of class book or
+// tape should input and output sales data along with its other data.
+
 
 #include <iostream>
 #include <string>
@@ -31,13 +31,10 @@ public:
     }
 
     void displayPublication() {
-        getData();
         cout << endl << "Publication details:" << endl;
         putData();
         cout << endl;
     }
-
-    // virtual ~Publication() {}
 };
 
 class Sales
@@ -109,9 +106,12 @@ int main(){
     Tape tape;
 
     cout << "Enter book details:" << endl;
-    book.displayPublication();
+    book.getData();
 
     cout << "Enter tape details:" << endl;
+    tape.getData();
+    
+    book.displayPublication();
     tape.displayPublication();
 
     return 0; 

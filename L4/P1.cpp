@@ -1,9 +1,9 @@
-/*
-    Assume class person stores the Name, Age and ID, class employee
-    stores the designation, basic salary, total overtime(hr) in a month
-    and hourly rate and class computedSalary stores the total salary of
-    the employee. Implement above concept using appropriate inheritance
-*/
+
+    // Assume class person stores the Name, Age and ID, class employee
+    // stores the designation, basic salary, total overtime(hr) in a month
+    // and hourly rate and class computedSalary stores the total salary of
+    // the employee. Implement above concept using appropriate inheritance
+
 
 #include <iostream>
 #include <string>
@@ -70,18 +70,14 @@ private:
     unsigned int totalSal;
 
 public:
-    void input() {
-        Employee::input();
-        compute();
-    }
-
     void compute() {
         totalSal = basicSal + totalOvertime * hourlyRate;
     }
 
     void displayInfo() {
-        cout <<"_____________________________________" << endl;
+        cout << endl;
         Employee::displayInfo();
+        compute();
         cout << "Total Salary: " << totalSal << endl;
     }
 };

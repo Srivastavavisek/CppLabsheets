@@ -1,3 +1,11 @@
+// a. Define an instance object of class DateTime called Watch.
+// b. Write a main () function that would initialize the values through the constructor
+// functions, and then allows them to be reset through the set () functions. Be sure and
+// display the results following the constructor before you use the set functions.
+// c. Through the use of the display () function, the time and date are to be displayed. Note
+// that the display () functions in all three classes need to be defined, as well as the
+// constructor and all the access functions.
+
 #include <iostream>
 #include <cstdio>
 

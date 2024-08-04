@@ -1,11 +1,11 @@
-/*
-Create a class publication that stores the title and price of a
-publication. From this class derive two classes:book, which adds a
-page count and tape, which adds a playing time in minutes. Each of
-these three classes should have getdata() function to get its data
-from the user at the keyboard and putdata() function to display its
-data.
-*/
+
+// Create a class publication that stores the title and price of a
+// publication. From this class derive two classes:book, which adds a
+// page count and tape, which adds a playing time in minutes. Each of
+// these three classes should have getdata() function to get its data
+// from the user at the keyboard and putdata() function to display its
+// data.
+
 
 #include<iostream>
 
@@ -29,7 +29,6 @@ public:
     }
 
     void displayPublication() {
-        getData();
         cout << endl << "Publication details:" << endl;
         putData();
         cout << endl;
@@ -76,9 +75,12 @@ int main(){
     Tape tape;
 
     cout << "Enter book details:" << endl;
-    book.displayPublication();
+    book.getData();
 
     cout << "Enter tape details:" << endl;
+    tape.getData();
+    
+    book.displayPublication();
     tape.displayPublication();
 
     return 0; 
